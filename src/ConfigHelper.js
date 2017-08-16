@@ -102,6 +102,16 @@ function normalize(file) {
     return r;
 }
 
+function is(fullPath, name) {
+    const p = Path.parse(fullPath);
+    const ext = p.ext;
+
+    if (p.name !== name) return false;
+    if ('.yml' !== ext && '.yaml' !== ext && '.json' !== ext && '.js' !== ext) return false;
+
+    return true;
+}
+
 /**
  * Read a configuration file. 
  * 
@@ -153,6 +163,7 @@ function load(file, defaultConfig, dump) {
 }
 
 module.exports = {
+    is,
     loadSpecific,
     load,
     normalize,
