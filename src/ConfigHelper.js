@@ -14,14 +14,14 @@ const YAML_DUMP_OPTIONS = {};
 const FILE_READ_OPTIONS = { encoding: 'utf-8' || env[global.PROJECT_PREFIX + '_CHARSET'] || env.CHARSET };
 
 
-let _log4js;
+let _logger;
 
 function logger() {
-    if (!_log4js) {
-        const Logger = require('json-log4js');
-        _log4js = new Logger('node-config-any');
+    if (!_logger) {
+        const Logger = require('qnode-log');
+        _logger = new Logger('qnode-config');
     }
-    return _log4js;
+    return _logger;
 }
 
 function logError() {
