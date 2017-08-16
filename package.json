@@ -1,7 +1,7 @@
 {
-    "name": "node-config-any",
-    "version": "1.0.0",
-    "description": "Node.js configuration file loader. Support YAML, JSON and plain javascript. HTTP(s) & git support is planned too",
+    "name": "qnode-config",
+    "version": "1.0.1",
+    "description": "Node.js configuration file loader. Support YAML, JSON and plain javascript. HTTP(s) & git support is planned too. By Qiang Yiting.",
     "main": "src/ConfigHelper.js",
     "scripts": {
         "coverage": "JASMINE_CONFIG_PATH=./jasmine.json node ./node_modules/istanbul/lib/cli.js cover -color ./node_modules/jasmine/bin/jasmine.js",
@@ -9,7 +9,7 @@
         "lint": "./node_modules/.bin/eslint -f stylish --cache --cache-location ./build/eslint/cache/ --color ./src/",
         "watch": "./node_modules/.bin/esw --watch -f stylish --cache --cache-location ./build/eslint/cache/ --color ./src/"
     },
-    "repository": "git@github.com:qiangyt/node-config-any.git",
+    "repository": "git@github.com:qiangyt/qnode-config.git",
     "author": "Qiang Yiting <qiangyt@wxcount.com> (https://github.com/qiangyt)",
     "keywords": [
         "yaml",
@@ -19,7 +19,7 @@
         "json"
     ],
     "bugs": {
-        "url": "https://github.com/qiangyt/node-config-any/issues"
+        "url": "https://github.com/qiangyt/qnode-config/issues"
     },
     "engines": {
         "node": ">=6"
