@@ -1,0 +1,2 @@
+todo:
+  - replace _.merge with _.extend(config,local)
