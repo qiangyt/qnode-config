@@ -1,6 +1,6 @@
 {
     "name": "qnode-config",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Node.js configuration file loader. Support YAML, JSON and plain javascript. HTTP(s) & git support is planned too. By Qiang Yiting.",
     "main": "src/ConfigHelper.js",
     "scripts": {
@@ -22,14 +22,14 @@
         "url": "https://github.com/qiangyt/qnode-config/issues"
     },
     "engines": {
-        "node": ">=6"
+        "node": ">=8"
     },
     "private": false,
     "license": "MIT",
     "dependencies": {
         "js-yaml": "3.9.1",
         "lodash": "4.17.4",
-        "qnode-log": "1.0.3"
+        "qnode-log": "1.0.4"
     },
     "devDependencies": {
         "babel": "6.23.0",
