@@ -128,7 +128,8 @@ function is(fullPath, name) {
  * @param defaultConfig default config if file not exists. optional
  * @param boolean dump true to dump the content
  */
-function load(file, defaultConfig, dump) {
+function _load(file, defaultConfig, dump) {
+
     const f = normalize(file);
     const b = f.base;
     const p = f.profile;
@@ -161,6 +162,25 @@ function load(file, defaultConfig, dump) {
     throw new Error(`file not found: ${b}[.profile].yml( or .yaml/.json/.js)`);
 
 }
+
+
+function load(file, defaultConfig, dump, forBeans) {
+    if (!file) file ='./config/config';
+    if (dump === undefined) dump = true;
+    if (forBeans === undefined) forBeans = true;
+
+    const r = _load(file, defaultConfig, dump);
+
+    if (forBeans) {
+        r.Beans = r.Beans || {};
+        if (!r.Beans.baseDir) {
+            r.Beans.baseDir = Path.join(process.cwd(), 'src');
+        }
+    }
+
+    return r;
+}
+
 
 module.exports = {
     is,
