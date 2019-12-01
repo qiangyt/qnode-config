@@ -27,8 +27,8 @@
     "private": false,
     "license": "MIT",
     "dependencies": {
-        "js-yaml": "3.9.1",
-        "lodash": "4.17.4",
+        "js-yaml": "3.13.1",
+        "lodash": "4.17.15",
         "qnode-log": "1.0.5"
     },
     "devDependencies": {
